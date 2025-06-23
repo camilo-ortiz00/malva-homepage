@@ -44,6 +44,7 @@
   color: #fff;
 } 
 
+/* Clases de Swiper.js para las flechas de navegación prev/next */
 .swiper-button-prev,
 .swiper-button-next {
   all: unset; 
@@ -60,6 +61,7 @@
   transition: background 0.3s ease;
 }
 
+/* Hover en flechas Swiper */
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   background-color: #000;
@@ -75,16 +77,19 @@
   justify-content: center;
 }
 
-
+/* MOBILE: ajustes para pantallas pequeñas */
 @media (max-width: 480px) {
+
+  /* Oculta las flechas de navegación en mobile */
   .arrows,
   .swiper-button-prev,
   .swiper-button-next {
     display: none !important;
   }
 
+  /* Elimina márgenes/padding en mobile para un ajuste más limpio */
   .sliderSection {
-  margin: 0;
-  padding: 0;
-}
+    margin: 0;
+    padding: 0;
+  }
 }

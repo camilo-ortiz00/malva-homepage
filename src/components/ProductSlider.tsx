@@ -19,19 +19,20 @@ export default function ProductSlider({ products }: { products: Product[] }) {
         </div>
       </div>
 
-
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation]} // Activa el módulo de navegación (flechas)
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next", 
+          prevEl: ".swiper-button-prev", 
         }}
-        spaceBetween={5}
-        slidesPerView="auto"
+        spaceBetween={5} // Espacio entre slides en px
+        slidesPerView="auto" // Slides se ajustan al contenido automáticamente
         breakpoints={{
-          768: { slidesPerView: 3.5 },
+          768: { slidesPerView: 3.5 }, // En pantallas mayores a 768px, muestra 3.5 slides
         }}
       >
+        
+        {/* Renderiza cada producto en su propio slide */}
         {products.map((product) => (
           <SwiperSlide key={product.id}>
             <ProductCard product={product} />

@@ -9,6 +9,7 @@ export default function Navbar() {
   const [scrollY, setScrollY] = useState(0);
   const [showNavbar, setShowNavbar] = useState(true);
 
+  //Hook para mostrar u ocultar el navbar
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -25,6 +26,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Combina clases dinámicamente según el scroll y visibilidad del navbar
   const navbarClass = `
     ${styles.navbar} 
     ${scrollY > 0 ? styles.scrolled : styles.transparent} 

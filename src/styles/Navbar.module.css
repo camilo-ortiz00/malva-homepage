@@ -11,26 +11,31 @@
   z-index: 1000;
 }
 
+/* Estado transparente de la barra (sin fondo) */
 .transparent {
   background-color: transparent;
 }
 
+/* Estado con fondo blanco al hacer scroll */
 .scrolled {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+/* Clase para hacer la barra visible (ej. al hacer scroll hacia arriba) */
 .visible {
   transform: translateY(0%);
   opacity: 1;
 }
 
+/* Clase para ocultar la barra (ej. al hacer scroll hacia abajo) */
 .hidden {
   transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
 }
 
+/* Botón de menú hamburguesa (versión mobile) */
 .hamburger {
   font-size: 1.5rem;
   background: none;
@@ -56,25 +61,28 @@
   gap: 1em;
 }
 
+/* Logo que se muestra solo en escritorio */
 .logoDesktop {
   display: block;
 }
 
+/* Logo centrado que solo aparece en dispositivos móviles */
 .centerLogoMobile {
-  display: none; /* Solo se muestra en móvil */
+  display: none; 
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-
+/* MOBILE: ajustes para pantallas pequeñas */
 @media (max-width: 480px) {
+
   .Left a {
     display: none;
   }
 
+  /* Oculta el segundo icono (usuario) en la barra derecha en mobile */
   .Right img:nth-child(2) {
-    /* Oculta el icono de usuario (segundo hijo en el contenedor Right) */
     display: none;
   }
 
@@ -95,10 +103,12 @@
     right: 1rem;
   }
 
-   .logoDesktop {
+  /* Oculta el logo de escritorio en mobile */
+  .logoDesktop {
     display: none;
   }
 
+  /* Muestra el logo centrado para mobile */
   .centerLogoMobile {
     display: block;
   }

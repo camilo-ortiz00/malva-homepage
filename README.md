@@ -27,3 +27,7 @@ Luego, ejecutar el servidor de desarrollo:
 pnpm next dev --turbopack
 
 y finalmente ingresar a http://localhost:3000 para ver el proyecto en el navegador.
+
+
+Nota:
+En el sidebar los submenús han sido implementados únicamente para las opciones del menú "Mujer". Los menús "Hombre" y "Shop by Brand" no incluyen submenús en este componente con el fin de mantener el código más conciso y enfocado en mostrar la lógica principal. 

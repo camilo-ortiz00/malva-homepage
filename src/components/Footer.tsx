@@ -11,7 +11,7 @@ export default function Footer() {
   const [showBottomMenu, setShowBottomMenu] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-
+  // Maneja el envío del formulario
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
@@ -23,16 +23,19 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.columns}>
-      <div className={`${styles.row} ${styles.followUs}`}>
-          <h4>Síguenos</h4>
-          <ul>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">TikTok</a></li>
-          </ul>
-      </div>
 
-      <div className={`${styles.column} ${styles.customerService}`}>
+        {/* Sección de contacto */}
+        <div className={`${styles.row} ${styles.followUs}`}>
+            <h4>Síguenos</h4>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">TikTok</a></li>
+            </ul>
+        </div>
+
+        {/* Sección de Servicio al Cliente (colapsable en móvil) */}
+        <div className={`${styles.column} ${styles.customerService}`}>
           <h4 onClick={() => setShowService(!showService)}>
             Servicio al Cliente 
             <Image
@@ -52,6 +55,7 @@ export default function Footer() {
           )}
         </div>
 
+        {/* Sección "Quiénes Somos"  */}
         <div className={`${styles.column} ${styles.about}`}>
           <h4 onClick={() => setShowAbout(!showAbout)}>
             Quiénes Somos
@@ -70,6 +74,7 @@ export default function Footer() {
           )}
         </div>
 
+        {/* Sección de formulario para newsletter */}
         <div className={`${styles.column} ${styles.newsletter}`}>
             <h3>Suscríbete a nuestro Newsletter</h3>
             <p>Regístrate para recibir el 10% de descuento en tu primera orden y ofertas exclusivas a lo largo del año</p>
@@ -127,6 +132,7 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Fila inferior con links legales y derechos de autor */}
       <div className={styles.bottomRow}>
         <h4 className={styles.bottomRowTitle} onClick={() => setShowBottomMenu(!showBottomMenu)}>
           Legal
@@ -146,12 +152,10 @@ export default function Footer() {
           <a href="#">SIC</a>
         </div>
 
-        {/* El párrafo queda fijo debajo del menú, no colapsa */}
         <p className={styles.bottomCopyright}>
           &copy; {new Date().getFullYear()}, MALVA ONLINE
         </p>
       </div>
-
     </footer>
   );
 }

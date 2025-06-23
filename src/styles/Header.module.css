@@ -8,11 +8,10 @@
   font-size: 0.77em;
   font-weight: var(--font-heading-weight);
   letter-spacing: 0.1rem;
-  z-index: 1001; /* Asegúrate de que esté por encima del contenido */
+  z-index: 1001;
 }
 
-  
-  .message {
-    margin: 0;
-  }
+.message {
+  margin: 0;
+}
   
