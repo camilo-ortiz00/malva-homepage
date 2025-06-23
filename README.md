@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Prueba Técnica - Malva Homepage (Frontend)
+Este proyecto corresponde a una prueba técnica de desarrollo frontend, inspirada en la estética y contenidos del sitio oficial de Malva.
 
-## Getting Started
+Desarrollado con Next.js, ReactJS y TypeScript, incluye estructura de componentes, estilos personalizados y uso de mocks para simular datos dinámicos.
 
-First, run the development server:
+Tecnologías Utilizadas
+Framework: Next.js 15 + ReactJs
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Lenguajes: TypeScript, HTML semántico, CSS (modular)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Estilos: CSS Modules (sin librerías de UI externas)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Assets: Imágenes, íconos y contenido de Malva
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Datos simulados: Mock data en archivos locales
 
-## Learn More
+Persistencia: Uso de localStorage para simular estado
 
-To learn more about Next.js, take a look at the following resources:
+Instalación y ejecución local
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+pnpm install
+o
+npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Luego, ejecutar el servidor de desarrollo:
 
-## Deploy on Vercel
+pnpm next dev --turbopack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+y finalmente ingresar a http://localhost:3000 para ver el proyecto en el navegador.
