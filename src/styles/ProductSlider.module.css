@@ -1,0 +1,90 @@
+.sliderSection {
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+.sliderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sliderHeader h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.arrow {
+  position: static !important; 
+  all: unset;
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: #000;
+  color: #fff;
+} 
+
+.swiper-button-prev,
+.swiper-button-next {
+  all: unset; 
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.swiper {
+  padding-bottom: 1rem;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media (max-width: 480px) {
+  .arrows,
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+
+  .sliderSection {
+  margin: 0;
+  padding: 0;
+}
+}

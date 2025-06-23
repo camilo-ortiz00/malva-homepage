@@ -1,0 +1,106 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem clamp(1rem, 4vw, 2rem);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.visible {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+.Left a {
+  padding-left: 1em;
+}
+
+.Right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+.logoDesktop {
+  display: block;
+}
+
+.centerLogoMobile {
+  display: none; /* Solo se muestra en móvil */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+@media (max-width: 480px) {
+  .Left a {
+    display: none;
+  }
+
+  .Right img:nth-child(2) {
+    /* Oculta el icono de usuario (segundo hijo en el contenedor Right) */
+    display: none;
+  }
+
+  .navbar {
+    justify-content: center;
+    padding: 1rem;
+    padding-top: 5rem;
+    min-height: 120px;
+  }
+
+  .Left {
+    position: absolute;
+    left: 1rem;
+  }
+
+  .Right {
+    position: absolute;
+    right: 1rem;
+  }
+
+   .logoDesktop {
+    display: none;
+  }
+
+  .centerLogoMobile {
+    display: block;
+  }
+
+}

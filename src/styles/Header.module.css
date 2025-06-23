@@ -1,0 +1,18 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 0.1em 1rem;
+  font-size: 0.77em;
+  font-weight: var(--font-heading-weight);
+  letter-spacing: 0.1rem;
+  z-index: 1001; /* Asegúrate de que esté por encima del contenido */
+}
+
+  
+  .message {
+    margin: 0;
+  }
+  
